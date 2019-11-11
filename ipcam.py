@@ -20,7 +20,7 @@ while True:
     key = cv2.waitKey(1)
 
     if key == ord('s'): 
-        cv2.imwrite('saved.jpg',img_rs)
+        cv2.imwrite('./image/shot.jpg',img_rs)
         print("Image saved!")
         cv2.destroyAllWindows()
         break
