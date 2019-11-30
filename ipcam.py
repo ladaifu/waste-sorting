@@ -2,9 +2,10 @@ import urllib.request
 import cv2
 import numpy as np
 
-url='http://192.168.43.96:8080/shot.jpg'
-while True:
+    # ip hiển thị trên màn hình điện thoại
+url='http://192.168.70.115:8080/shot.jpg'
 
+while True:
     # sử dụng urllib để lấy hình ảnh từ IPwebcam
     imgResp = urllib.request.urlopen(url)
 
@@ -18,11 +19,9 @@ while True:
     cv2.imshow('IPWebcam',img_rs)
 
     key = cv2.waitKey(1)
-
-    if key == ord('s'): 
+    # nhấn "s" để chụp
+    if key == ord('s'):
         cv2.imwrite('./image/shot.jpg',img_rs)
         print("Image saved!")
         cv2.destroyAllWindows()
-        break
-    elif key == ord('q'):
         break
